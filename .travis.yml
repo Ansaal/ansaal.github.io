@@ -6,6 +6,7 @@ script: npm run build
 after_success:
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
   - eval $(ssh-agent -s)
+  - chmod 600 github_deploy_key
   - ssh-add github_deploy_key
   - git clone git@github.com:Ansaal/ansaal.github.io.git deploy
   - mv -f dist deploy
