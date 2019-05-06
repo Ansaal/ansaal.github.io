@@ -9,7 +9,7 @@ after_success:
   - chmod 600 github_deploy_key
   - ssh-add github_deploy_key
   - git clone git@github.com:Ansaal/ansaal.github.io.git deploy
-  - mv -f dist deploy
+  - mv -f dist/* deploy
   - cd deploy
   - git remote
   - git config user.email jhulsch.jh@gmail.com
