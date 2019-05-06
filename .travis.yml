@@ -13,7 +13,8 @@ after_success:
   - git remote
   - git config user.email jhulsch.jh@gmail.com
   - git config user.name Ansaal
-  - git rm -rf *
+  - git branch -D master
+  - git checkout -b master 52b0fe9bdb027532cee820800bfa708f385b7903
   - cd ..
   - mv -f dist/* deploy
   - cd deploy
