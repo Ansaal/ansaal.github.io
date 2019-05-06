@@ -9,7 +9,7 @@ deploy:
   local_dir: '/dist'
   provider: pages
   skip_cleanup: true
-  github_token: '$encrypted_ef7bff34d55e_key'
+  github_token: '$github_deploy_key'
   keep_history: false
   on:
     branch: master
