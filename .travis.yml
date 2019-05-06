@@ -13,4 +13,4 @@ after_success:
   - git config user.name Ansaal
   - git add -A
   - git commit -m Commit from Travis
-  - git push "https://$github_deploy_key@Ansaal/ansaal.github.io" origin master
+  - git push origin master
