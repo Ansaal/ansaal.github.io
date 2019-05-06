@@ -5,7 +5,7 @@ node_js:
 script: npm run build
 after_success:
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
-  - git clone git://Ansaal/ansaal.github.io.git deploy
+  - git clone git://github.com/Ansaal/ansaal.github.io.git deploy
   - mv -f dist deploy
   - cd deploy
   - git remote
