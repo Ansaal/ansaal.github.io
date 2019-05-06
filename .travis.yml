@@ -9,11 +9,14 @@ after_success:
   - chmod 600 github_deploy_key
   - ssh-add github_deploy_key
   - git clone git@github.com:Ansaal/ansaal.github.io.git deploy
-  - mv -f dist/* deploy
   - cd deploy
   - git remote
   - git config user.email jhulsch.jh@gmail.com
   - git config user.name Ansaal
+  - git rm -rf *
+  - cd ..
+  - mv -f dist/* deploy
+  - cd deploy
   - git add -A
   - git commit -m "Commit from Travis"
   - git push origin master
