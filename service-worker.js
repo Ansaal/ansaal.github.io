@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.432287f6caa01cb7f7aa52b9efa7de75.js"
+  "/precache-manifest.1baf9e38a858a3ccfe11caccadaeca3a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ansaal.github.io"});
