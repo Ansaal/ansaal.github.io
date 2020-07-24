@@ -1,64 +1,39 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer v-model="drawer" clipped app>
-      <v-list dense>
-        <v-list-tile v-for="item in navigation.routes" :key="item.text" @click :to="item.path">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.text }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-divider/>
-        <v-list-tile class="mt-3" @click>
-          <v-list-tile-action>
-            <v-icon>add_circle_outline</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Browse Repositories</v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile @click to="/contact">
-          <v-list-tile-action>
-            <v-icon>perm_contact_calendar</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Contact</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar fixed clipped-left app>
-      <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>ANSAAL</span>
-        <span class="ml-2 font-weight-light">Fullstack-DEVELOPMENT</span>
-      </v-toolbar-title>
-    </v-toolbar>
+  <v-app>
+    <v-navigation-drawer value="true" app permanent fixed color="primary">
 
-    <v-content>
-      <router-view></router-view>
-    </v-content>
+    </v-navigation-drawer>
+    <v-main class="ml-12">
+      <v-row class="justify-start">
+      <div class="display-3 text--primary" style="font-weight: bolder; color:#1a237e!important;">
+        Johannes Hulsch
+      </div>
+      </v-row>
+      <v-row>
+        <div class="display-1">
+          Software Engineer
+        </div>
+      </v-row>
+      <v-row class="mt-12">
+        <v-icon>mdi-map-marker</v-icon>
+        <span>Hanover, 30982 Germany</span>
+      </v-row>
+      <v-row class="mt-12">
+        <v-icon>mdi-email</v-icon>
+        <a href="mailto:jhulsch.jh@gmail.com">jhulsch.jh@gmail.com</a>
+      </v-row>
+    </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Component from "vue-class-component";
-@Component({
-  components: {}
-})
+import {Component} from "vue-property-decorator";
+
+@Component
 export default class App extends Vue {
-  name: string = "App";
-  drawer: boolean = false;
 
 
-
-  navigation = {
-    routes: [
-      { text: "Home", icon: "home", path: "/" },
-      { text: "Web-Development", icon: "web", path: "/web" },
-      { text: "Machine-Learning", icon: "show_chart", path: "/ml" },
-
-    ]
-  }
 
 }
 </script>
