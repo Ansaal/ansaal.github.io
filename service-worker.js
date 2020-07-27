@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.219839d4a20ab5c4526f0af5642e829c.js"
+  "/precache-manifest.4defa6bc03fd55b5047392bf8cc0c93e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "jhulsch.github.io"});
